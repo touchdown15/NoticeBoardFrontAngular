@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Edit notice</h1>
+<div>
+
+  <form class = "example-form" [formGroup]="dialogFormEdit">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" name="title">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" name="description"></textarea>
+    </mat-form-field>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="editModifyNotice()" >Save</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</div>

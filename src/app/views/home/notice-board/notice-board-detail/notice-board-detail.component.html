@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar-font">
+    <div class="header">
+      <a href="/notices" class="logo">Notice Board</a>
+    </div>
+    <span class="space"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div fxLayout="column" fxLayoutAlign="space-around start" style="padding: 2%">
+
+  <ng-container style="margin: 0.5%">
+
+    <mat-card class="mat-card-notice">
+      <p>
+        <span class="font-items">{{notice.title}}</span>
+      </p>
+      <p>
+        <span class="font-items-normal-text">{{notice.description}}</span>
+      </p>
+      <p>
+        <span class="font-items-dates">Publish Date: </span>
+        <span class="font-items-dates">{{notice.publishDate}}</span>
+      </p>
+      <p>
+        <button mat-icon-button (click) = "editNotice()">
+          <mat-icon>launch</mat-icon>
+        </button>
+      </p>
+    </mat-card>
+
+  </ng-container>
+
+</div>

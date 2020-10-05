@@ -1,0 +1,28 @@
+<mat-tab-group mat-align-tabs="center" class="tab-space">
+  <mat-tab label="New Notices">
+    <div fxLayout="column" fxLayoutAlign="space-around start" style="padding: 2%">
+
+      <ng-container *ngFor="let notice of noticesCurrent" style="margin: 0.5%">
+
+        <mat-card class="mat-card-notice">
+          <a class="txtlink" routerLink="/notices/{{notice.id}}"> {{notice.title}} </a>
+
+          <span class="space"></span>
+
+          <button class="bttonJustify" mat-icon-button color="warn" (click)="deleteNoticeApplication(notice.id)" >
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+
+        </mat-card>
+
+      </ng-container>
+
+      <ul class="nav nav-pill">
+        <li class="nav-item" *ngFor="let numberOfPages of noticesPages; let i=index">
+          <a class="nav-link" href="" (click)="setPage(i,$event)" [ngClass]="{'active':i==page}"> {{i}}</a>
+        </li>
+      </ul>
+
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,12 @@
+.exemple-form{
+  min-width: 100px;
+  max-width: 500px;
+  min-height: 2%;
+  height: 2px;
+  width: 100%;
+}
+
+.exemple-full-width{
+  height: 100%;
+  width: 100%;
+}
